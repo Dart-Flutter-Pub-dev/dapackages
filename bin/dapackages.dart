@@ -19,19 +19,21 @@ Future<void> main(List<String> args) async {
 }
 
 Future<List<Dependency>> getDependencies(File file, String section) async {
-  final String content = await file.readAsString();
-  final dynamic yaml = loadYaml(content);
-
-  final YamlMap dependencies = yaml[section];
   final List<Dependency> list = <Dependency>[];
 
-  for (MapEntry<dynamic, dynamic> entry in dependencies.entries) {
-    if (entry.value is String) {
-      final String name = entry.key.toString();
-      final String value = entry.value.toString();
+  final String content = await file.readAsString();
+  final dynamic yaml = loadYaml(content);
+  final YamlMap dependencies = yaml[section];
 
-      if (!name.startsWith('>') && !name.startsWith('<')) {
-        list.add(Dependency(name, value));
+  if (dependencies != null) {
+    for (MapEntry<dynamic, dynamic> entry in dependencies.entries) {
+      if (entry.value is String) {
+        final String name = entry.key.toString();
+        final String value = entry.value.toString();
+
+        if (!name.startsWith('>') && !name.startsWith('<')) {
+          list.add(Dependency(name, value));
+        }
       }
     }
   }

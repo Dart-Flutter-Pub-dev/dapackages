@@ -1,3 +1,3 @@
 #!/bin/sh
 
-flutter pub pub run dapackage:dapackage.dart ./example/pubspec.yaml
+flutter pub pub run dapackages:dapackages.dart ./example/pubspec.yaml
