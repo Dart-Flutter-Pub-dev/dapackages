@@ -31,7 +31,9 @@ Future<List<Dependency>> getDependencies(File file, String section) async {
         final String name = entry.key.toString();
         final String value = entry.value.toString();
 
-        if (!name.startsWith('>') && !name.startsWith('<')) {
+        if (!value.startsWith('>') &&
+            !value.startsWith('<') &&
+            value.startsWith('^')) {
           list.add(Dependency(name, value));
         }
       }

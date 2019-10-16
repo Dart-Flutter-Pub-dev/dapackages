@@ -1,16 +1,16 @@
 name: dapackages
 description: A Flutter package to automatically update your pubspec dependencies in your project.
-version: 1.0.0
+version: 1.1.1
 author: Mauricio Togneri <mauricio.togneri@gmail.com>
 homepage: https://github.com/mauriciotogneri/dapackages
 
 environment:
-  sdk: ">=2.4.0 <3.0.0"
+  sdk: ">=2.5.0 <3.0.0"
 
 dependencies:
 
   flutter:
     sdk: flutter
 
-  yaml: ^2.1.16
+  yaml: ^2.2.0
   http: ^0.12.0+2
