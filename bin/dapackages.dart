@@ -31,7 +31,9 @@ Future<List<Dependency>> getDependencies(File file, String section) async {
         final String name = entry.key.toString();
         final String value = entry.value.toString();
 
-        if (!value.startsWith('>') &&
+        if (name.isNotEmpty &&
+            value.isNotEmpty &&
+            !value.startsWith('>') &&
             !value.startsWith('<') &&
             value.startsWith('^')) {
           list.add(Dependency(name, value));
@@ -73,8 +75,10 @@ Future<void> updateFile(File file, List<Dependency> list) async {
 
   for (Dependency dependency in list) {
     if (dependency.hasNewVersion) {
-      yaml =
-          yaml.replaceFirst(dependency.currentVersion, dependency.newVersion);
+      final String search = '${dependency.name}: ${dependency.currentVersion}';
+      final String replace = '${dependency.name}: ${dependency.newVersion}';
+
+      yaml = yaml.replaceFirst(search, replace);
     }
   }
 
