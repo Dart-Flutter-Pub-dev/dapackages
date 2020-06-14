@@ -26,7 +26,7 @@ Future<List<Dependency>> getDependencies(File file, String section) async {
   final YamlMap dependencies = yaml[section];
 
   if (dependencies != null) {
-    for (MapEntry<dynamic, dynamic> entry in dependencies.entries) {
+    for (final MapEntry<dynamic, dynamic> entry in dependencies.entries) {
       if (entry.value is String) {
         final String name = entry.key.toString();
         final String value = entry.value.toString();
@@ -73,7 +73,7 @@ Future<String> getLatestVersion(String name) async {
 Future<void> updateFile(File file, List<Dependency> list) async {
   String yaml = await file.readAsString();
 
-  for (Dependency dependency in list) {
+  for (final Dependency dependency in list) {
     if (dependency.hasNewVersion) {
       final String search = '${dependency.name}: ${dependency.currentVersion}';
       final String replace = '${dependency.name}: ${dependency.newVersion}';
