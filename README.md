@@ -4,11 +4,11 @@ A *Flutter* package to automatically update your pubspec dependencies in your pr
 
 ## Installation
 
-Add the following dependencies to your `pubspec.yaml`:
+Add the following dependency to your `pubspec.yaml`:
 
 ```yaml
 dev_dependencies:
-  dapackages: ^1.0.0
+  dapackages: ^1.3.0
 ```
 
 #### Run the updater
