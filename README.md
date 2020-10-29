@@ -1,6 +1,6 @@
 # Dapackages
 
-A *Flutter* package to automatically update your pubspec dependencies in your project.
+A *Dart* package to automatically update your pubspec dependencies in your project.
 
 ## Installation
 
@@ -8,7 +8,7 @@ Add the following dependency to your `pubspec.yaml`:
 
 ```yaml
 dev_dependencies:
-  dapackages: ^1.3.0
+  dapackages: ^1.4.0
 ```
 
 #### Run the updater

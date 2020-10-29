@@ -1,15 +1,11 @@
 name: dapackages_example
 description: Example code for the dapackages library.
-version: 1.0.0
+version: 1.4.0
 homepage: https://github.com/mauriciotogneri/dapackages
 
 environment:
   sdk: ">=2.9.0 <3.0.0"
 
 dependencies:
-
-  flutter:
-    sdk: flutter
-  
-  yaml: ^2.2.0
+  yaml: ^2.2.1
   http: ^0.12.2
