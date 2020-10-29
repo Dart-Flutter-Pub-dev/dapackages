@@ -7,9 +7,5 @@ environment:
   sdk: ">=2.9.0 <3.0.0"
 
 dependencies:
-
-  flutter:
-    sdk: flutter
-
   yaml: ^2.2.1
   http: ^0.12.2
