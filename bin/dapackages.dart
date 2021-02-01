@@ -24,9 +24,10 @@ Future<List<Dependency>> getDependencies(File file, String section) async {
 
   final String content = await file.readAsString();
   final dynamic yaml = loadYaml(content);
-  final YamlMap dependencies = yaml[section];
 
-  if (dependencies != null) {
+  if (yaml[section] != null) {
+    final YamlMap dependencies = yaml[section];
+
     for (final MapEntry<dynamic, dynamic> entry in dependencies.entries) {
       if (entry.value is String) {
         final String name = entry.key.toString();
@@ -65,7 +66,7 @@ Future<void> updateDependencies(List<Dependency> list) async {
 
 Future<String> getLatestVersion(String name) async {
   final Response response =
-      await get('https://pub.dartlang.org/api/packages/$name');
+      await get(Uri.parse('https://pub.dartlang.org/api/packages/$name'));
   final dynamic json = jsonDecode(response.body);
 
   return json['latest']['version'];

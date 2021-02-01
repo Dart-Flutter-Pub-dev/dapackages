@@ -8,7 +8,7 @@ Add the following dependency to your `pubspec.yaml`:
 
 ```yaml
 dev_dependencies:
-  dapackages: ^1.4.0
+  dapackages: ^1.5.0-nullsafety.0
 ```
 
 #### Run the updater
