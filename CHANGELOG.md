@@ -17,3 +17,7 @@
 ## [1.5.0-nullsafety.0] - 2021-02-01
 
 * Added null safety support
+
+## [1.6.0] - 2021-03-07
+
+* Added support for null safety

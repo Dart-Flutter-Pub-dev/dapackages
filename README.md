@@ -8,7 +8,7 @@ Add the following dependency to your `pubspec.yaml`:
 
 ```yaml
 dev_dependencies:
-  dapackages: ^1.5.0-nullsafety.0
+  dapackages: ^1.6.0
 ```
 
 #### Run the updater
@@ -21,4 +21,11 @@ For example:
 
 ```bash
 flutter pub pub run dapackages:dapackages.dart ./pubspec.yaml
+```
+
+## Alternative
+
+You can also run:
+```bash
+flutter pub outdated
 ```

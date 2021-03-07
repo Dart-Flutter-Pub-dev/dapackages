@@ -1,11 +1,11 @@
 name: dapackages
 description: A Dart package to automatically update your pubspec dependencies in your project.
-version: 1.5.0-nullsafety.0
+version: 1.6.0
 homepage: https://github.com/mauriciotogneri/dapackages
 
 environment:
-  sdk: ">=2.12.0-133.7.beta <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  yaml: ^3.0.0-nullsafety.0
-  http: ^0.13.0-nullsafety.0
+  http: ^0.13.0
+  yaml: ^3.1.0
